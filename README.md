@@ -1,2 +1,2 @@
-# Recommendations-for-development-of-typical-development-areas-
-FFFFFFFFFF
+Recommendations for development of typical development areas
+
