@@ -1,0 +1,2246 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e7a27fd72066d6f3df672e95a8001dca {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_e7a27fd72066d6f3df672e95a8001dca" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_e7a27fd72066d6f3df672e95a8001dca = L.map(
+                "map_e7a27fd72066d6f3df672e95a8001dca",
+                {
+                    center: [59.9343, 30.3351],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 14,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_9787ea4c9bb2a9c633708b4969ec0cd7 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_9787ea4c9bb2a9c633708b4969ec0cd7.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_7556e9ddf0a5ddd6722342b584760ad6_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "green", "fillColor": "green", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_7556e9ddf0a5ddd6722342b584760ad6_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_7556e9ddf0a5ddd6722342b584760ad6 = L.geoJson(null, {
+                onEachFeature: geo_json_7556e9ddf0a5ddd6722342b584760ad6_onEachFeature,
+            
+                style: geo_json_7556e9ddf0a5ddd6722342b584760ad6_styler,
+            ...{
+}
+        });
+
+        function geo_json_7556e9ddf0a5ddd6722342b584760ad6_add (data) {
+            geo_json_7556e9ddf0a5ddd6722342b584760ad6
+                .addData(data);
+        }
+            geo_json_7556e9ddf0a5ddd6722342b584760ad6_add({"features": [{"geometry": {"coordinates": [[[[30.4645747, 59.8648209], [30.464444, 59.8653292], [30.4644258, 59.8653962], [30.4654423, 59.8654625], [30.4654062, 59.865602], [30.4651848, 59.8655876], [30.4648306, 59.8655645], [30.4644129, 59.8655372], [30.4641044, 59.8655171], [30.4641583, 59.8653134], [30.4641914, 59.865176], [30.4642508, 59.8649308], [30.4642894, 59.8648023], [30.4642977, 59.8647296], [30.4642301, 59.8646901], [30.4641432, 59.8646394], [30.4640929, 59.8646359], [30.4640748, 59.8646347], [30.4640539, 59.8646332], [30.4640318, 59.8647072], [30.4640215, 59.8647108], [30.4638486, 59.8647043], [30.4634925, 59.8646805], [30.463371, 59.8646737], [30.4633638, 59.8646466], [30.4632955, 59.8646448], [30.4632852, 59.8647442], [30.4631064, 59.8647343], [30.4627325, 59.8647189], [30.4626593, 59.8647153], [30.4625915, 59.8647007], [30.4624977, 59.8646978], [30.4624012, 59.8646953], [30.4622575, 59.8647458], [30.4622453, 59.8648303], [30.4620145, 59.864816], [30.4620159, 59.8647807], [30.4619991, 59.8647816], [30.4620042, 59.8647513], [30.4619857, 59.8647471], [30.4619823, 59.8647147], [30.4620042, 59.8646941], [30.4620092, 59.8646671], [30.4623218, 59.8645463], [30.4624293, 59.8645451], [30.4624974, 59.8645712], [30.4625323, 59.8645563], [30.4626811, 59.8645584], [30.4628234, 59.8645775], [30.4632932, 59.8646005], [30.4632983, 59.8645227], [30.4638752, 59.8645438], [30.4639255, 59.8645673], [30.4640261, 59.8645709], [30.4640332, 59.8645114], [30.4640963, 59.8645139], [30.4641167, 59.8645147], [30.4641697, 59.8645168], [30.4642344, 59.8645042], [30.4643457, 59.864515], [30.464603, 59.8646628], [30.464603, 59.8647061], [30.4645747, 59.8648209]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_7556e9ddf0a5ddd6722342b584760ad6.bindTooltip(
+                `<div>
+                     ID: r7085543, Год постройки: 2017, Общий балл: 8
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_7556e9ddf0a5ddd6722342b584760ad6.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_e24c1b8107356306bceed9299295c9d8_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "green", "fillColor": "green", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_e24c1b8107356306bceed9299295c9d8_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_e24c1b8107356306bceed9299295c9d8 = L.geoJson(null, {
+                onEachFeature: geo_json_e24c1b8107356306bceed9299295c9d8_onEachFeature,
+            
+                style: geo_json_e24c1b8107356306bceed9299295c9d8_styler,
+            ...{
+}
+        });
+
+        function geo_json_e24c1b8107356306bceed9299295c9d8_add (data) {
+            geo_json_e24c1b8107356306bceed9299295c9d8
+                .addData(data);
+        }
+            geo_json_e24c1b8107356306bceed9299295c9d8_add({"features": [{"geometry": {"coordinates": [[[[30.4656639, 59.862834], [30.4658301, 59.8629938], [30.4660758, 59.8632302], [30.4658336, 59.8632909], [30.4655012, 59.8633741], [30.4651015, 59.8634742], [30.464548, 59.8636128], [30.4643069, 59.8633711], [30.4644911, 59.8633243], [30.4645931, 59.863432], [30.464705, 59.8634033], [30.4649617, 59.8633374], [30.4653625, 59.8632345], [30.4656106, 59.8631709], [30.4656396, 59.8631634], [30.4655147, 59.8630344], [30.4653842, 59.8628998], [30.4656639, 59.862834]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_e24c1b8107356306bceed9299295c9d8.bindTooltip(
+                `<div>
+                     ID: r7793306, Год постройки: 2021, Общий балл: 8
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_e24c1b8107356306bceed9299295c9d8.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_69ab1baa4d3a2c8e7799a99b03ea7bae_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "green", "fillColor": "green", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_69ab1baa4d3a2c8e7799a99b03ea7bae_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_69ab1baa4d3a2c8e7799a99b03ea7bae = L.geoJson(null, {
+                onEachFeature: geo_json_69ab1baa4d3a2c8e7799a99b03ea7bae_onEachFeature,
+            
+                style: geo_json_69ab1baa4d3a2c8e7799a99b03ea7bae_styler,
+            ...{
+}
+        });
+
+        function geo_json_69ab1baa4d3a2c8e7799a99b03ea7bae_add (data) {
+            geo_json_69ab1baa4d3a2c8e7799a99b03ea7bae
+                .addData(data);
+        }
+            geo_json_69ab1baa4d3a2c8e7799a99b03ea7bae_add({"features": [{"geometry": {"coordinates": [[[[30.4656639, 59.862834], [30.4655696, 59.8627355], [30.4653285, 59.8625019], [30.4651271, 59.8623101], [30.4649907, 59.8621653], [30.4644418, 59.8623052], [30.4640574, 59.8624031], [30.4635276, 59.8625381], [30.4636452, 59.862652], [30.4636959, 59.8627022], [30.4639113, 59.8626516], [30.4638576, 59.8626046], [30.4638643, 59.8625911], [30.4641599, 59.8625103], [30.4645636, 59.8624157], [30.4648603, 59.8623345], [30.4648904, 59.8623673], [30.4650621, 59.8625633], [30.4652838, 59.8627967], [30.4653842, 59.8628998], [30.4656639, 59.862834]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_69ab1baa4d3a2c8e7799a99b03ea7bae.bindTooltip(
+                `<div>
+                     ID: r7793307, Год постройки: 2021, Общий балл: 8
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_69ab1baa4d3a2c8e7799a99b03ea7bae.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_e23a1a1e6a078a1cfe62e175a39e6635_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_e23a1a1e6a078a1cfe62e175a39e6635_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_e23a1a1e6a078a1cfe62e175a39e6635 = L.geoJson(null, {
+                onEachFeature: geo_json_e23a1a1e6a078a1cfe62e175a39e6635_onEachFeature,
+            
+                style: geo_json_e23a1a1e6a078a1cfe62e175a39e6635_styler,
+            ...{
+}
+        });
+
+        function geo_json_e23a1a1e6a078a1cfe62e175a39e6635_add (data) {
+            geo_json_e23a1a1e6a078a1cfe62e175a39e6635
+                .addData(data);
+        }
+            geo_json_e23a1a1e6a078a1cfe62e175a39e6635_add({"features": [{"geometry": {"coordinates": [[[[30.4734707, 59.8623046], [30.4733357, 59.8623105], [30.4731838, 59.8623237], [30.4731882, 59.8623378], [30.4730618, 59.8623523], [30.4730318, 59.8623142], [30.4729661, 59.8622333], [30.4727263, 59.862283], [30.4729146, 59.8624961], [30.4730948, 59.8624573], [30.473246, 59.8624391], [30.4734038, 59.8624254], [30.4735314, 59.8624167], [30.4736406, 59.862412], [30.4736917, 59.8624112], [30.4738759, 59.8624143], [30.4739892, 59.8624181], [30.4740849, 59.862423], [30.4742152, 59.8624394], [30.4743659, 59.862463], [30.474419, 59.8624715], [30.4745389, 59.8624909], [30.4746555, 59.8625157], [30.4748826, 59.8625743], [30.4750696, 59.8626337], [30.4753051, 59.8624372], [30.4753244, 59.8624215], [30.4753676, 59.8623851], [30.4752097, 59.8623388], [30.4751672, 59.8623748], [30.4751475, 59.862391], [30.4751027, 59.8623775], [30.4750302, 59.8624403], [30.4749818, 59.8624823], [30.4749242, 59.8624661], [30.4749322, 59.862458], [30.4748166, 59.8624269], [30.474671, 59.8623944], [30.4746267, 59.8623855], [30.4745816, 59.8623783], [30.4744818, 59.8623618], [30.4743939, 59.862349], [30.4742559, 59.8623315], [30.4741141, 59.8623154], [30.4740773, 59.8623115], [30.4740093, 59.8623072], [30.4738777, 59.8623013], [30.473732, 59.862297], [30.4736345, 59.8622972], [30.4735449, 59.8623013], [30.4735096, 59.8623029], [30.4734707, 59.8623046]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_e23a1a1e6a078a1cfe62e175a39e6635.bindTooltip(
+                `<div>
+                     ID: r7879677, Год постройки: 1974, Общий балл: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_e23a1a1e6a078a1cfe62e175a39e6635.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_0955f8cf108fe2bbed4c22af51017b01_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "green", "fillColor": "green", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_0955f8cf108fe2bbed4c22af51017b01_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_0955f8cf108fe2bbed4c22af51017b01 = L.geoJson(null, {
+                onEachFeature: geo_json_0955f8cf108fe2bbed4c22af51017b01_onEachFeature,
+            
+                style: geo_json_0955f8cf108fe2bbed4c22af51017b01_styler,
+            ...{
+}
+        });
+
+        function geo_json_0955f8cf108fe2bbed4c22af51017b01_add (data) {
+            geo_json_0955f8cf108fe2bbed4c22af51017b01
+                .addData(data);
+        }
+            geo_json_0955f8cf108fe2bbed4c22af51017b01_add({"features": [{"geometry": {"coordinates": [[[[30.4641289, 59.8677663], [30.4641045, 59.8677353], [30.4644499, 59.8675665], [30.4647952, 59.8673976], [30.4648481, 59.8674075], [30.4648378, 59.8674209], [30.4648953, 59.8674279], [30.4649437, 59.8674339], [30.4650527, 59.8674348], [30.4651594, 59.8674235], [30.4652585, 59.8674007], [30.4653451, 59.8673674], [30.4651816, 59.867281], [30.4651262, 59.8673026], [30.4650609, 59.8673154], [30.464991, 59.8673185], [30.4649539, 59.8673146], [30.4649223, 59.8673114], [30.4648541, 59.8672943], [30.4647995, 59.8672676], [30.4647637, 59.8672339], [30.4647536, 59.8672063], [30.46475, 59.8671963], [30.4647273, 59.867197], [30.4646272, 59.8672003], [30.4646308, 59.867228], [30.4646134, 59.8672292], [30.464596, 59.8672303], [30.4645541, 59.867206], [30.4645176, 59.867206], [30.4644975, 59.8672169], [30.4644774, 59.8672277], [30.4644713, 59.8672898], [30.4645052, 59.8673065], [30.4645434, 59.8673067], [30.4645432, 59.8673154], [30.4645431, 59.8673241], [30.4645258, 59.867324], [30.464516, 59.8673289], [30.4643454, 59.8674138], [30.4643375, 59.8674178], [30.4643375, 59.8674268], [30.4643032, 59.8674268], [30.4643033, 59.8674177], [30.4642528, 59.8673921], [30.4642071, 59.8674149], [30.4641894, 59.8674059], [30.4641363, 59.8674324], [30.464154, 59.8674413], [30.4641085, 59.867464], [30.4641589, 59.8674895], [30.4641751, 59.8674896], [30.464175, 59.867498], [30.464175, 59.8675064], [30.4641558, 59.8675063], [30.46397, 59.8675981], [30.4639699, 59.867605], [30.4639522, 59.8676049], [30.4639345, 59.8676049], [30.4639347, 59.867588], [30.4639005, 59.8675706], [30.4637716, 59.8675716], [30.4637337, 59.8675904], [30.4637334, 59.8676133], [30.4637786, 59.8676352], [30.4637731, 59.8676433], [30.4637676, 59.8676514], [30.4637173, 59.8676472], [30.4637088, 59.8677033], [30.4637077, 59.8677102], [30.4637145, 59.8677109], [30.4637213, 59.8677116], [30.4637813, 59.8677181], [30.4638472, 59.8677364], [30.4638999, 59.8677634], [30.4639345, 59.8677969], [30.4639462, 59.867833], [30.463938, 59.8678694], [30.4639106, 59.8679034], [30.463866, 59.8679323], [30.4640245, 59.8680167], [30.4640975, 59.8679749], [30.4641493, 59.8679258], [30.4641769, 59.867872], [30.4641789, 59.8678165], [30.4641552, 59.8677622], [30.4641289, 59.8677663]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_0955f8cf108fe2bbed4c22af51017b01.bindTooltip(
+                `<div>
+                     ID: r16261962, Год постройки: 2003, Общий балл: 8
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_0955f8cf108fe2bbed4c22af51017b01.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_129aab1ec6f030431f8d889428023a69_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_129aab1ec6f030431f8d889428023a69_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_129aab1ec6f030431f8d889428023a69 = L.geoJson(null, {
+                onEachFeature: geo_json_129aab1ec6f030431f8d889428023a69_onEachFeature,
+            
+                style: geo_json_129aab1ec6f030431f8d889428023a69_styler,
+            ...{
+}
+        });
+
+        function geo_json_129aab1ec6f030431f8d889428023a69_add (data) {
+            geo_json_129aab1ec6f030431f8d889428023a69
+                .addData(data);
+        }
+            geo_json_129aab1ec6f030431f8d889428023a69_add({"features": [{"geometry": {"coordinates": [[[[30.4570874, 59.864213], [30.457273, 59.8641668], [30.4573322, 59.8642268], [30.4574602, 59.8643564], [30.4575882, 59.864486], [30.4577162, 59.8646156], [30.4578441, 59.8647452], [30.4579721, 59.8648748], [30.4580367, 59.8649402], [30.4578511, 59.8649864], [30.4570874, 59.864213]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_129aab1ec6f030431f8d889428023a69.bindTooltip(
+                `<div>
+                     ID: w30420117, Год постройки: 1961, Общий балл: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_129aab1ec6f030431f8d889428023a69.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_992e4da0531a59dd6e51555112881e93_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_992e4da0531a59dd6e51555112881e93_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_992e4da0531a59dd6e51555112881e93 = L.geoJson(null, {
+                onEachFeature: geo_json_992e4da0531a59dd6e51555112881e93_onEachFeature,
+            
+                style: geo_json_992e4da0531a59dd6e51555112881e93_styler,
+            ...{
+}
+        });
+
+        function geo_json_992e4da0531a59dd6e51555112881e93_add (data) {
+            geo_json_992e4da0531a59dd6e51555112881e93
+                .addData(data);
+        }
+            geo_json_992e4da0531a59dd6e51555112881e93_add({"features": [{"geometry": {"coordinates": [[[[30.455303, 59.8645407], [30.4552149, 59.8644538], [30.456746, 59.8640624], [30.4568342, 59.8641494], [30.4566996, 59.8641838], [30.456448, 59.8642481], [30.4561841, 59.8643156], [30.4559388, 59.8643782], [30.4556807, 59.8644442], [30.4554307, 59.8645081], [30.455303, 59.8645407]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_992e4da0531a59dd6e51555112881e93.bindTooltip(
+                `<div>
+                     ID: w30420156, Год постройки: 1961, Общий балл: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_992e4da0531a59dd6e51555112881e93.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_2b806ab9eabb3bf8298f88b678b2d81a_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_2b806ab9eabb3bf8298f88b678b2d81a_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_2b806ab9eabb3bf8298f88b678b2d81a = L.geoJson(null, {
+                onEachFeature: geo_json_2b806ab9eabb3bf8298f88b678b2d81a_onEachFeature,
+            
+                style: geo_json_2b806ab9eabb3bf8298f88b678b2d81a_styler,
+            ...{
+}
+        });
+
+        function geo_json_2b806ab9eabb3bf8298f88b678b2d81a_add (data) {
+            geo_json_2b806ab9eabb3bf8298f88b678b2d81a
+                .addData(data);
+        }
+            geo_json_2b806ab9eabb3bf8298f88b678b2d81a_add({"features": [{"geometry": {"coordinates": [[[[30.4553094, 59.8659032], [30.4553185, 59.8657846], [30.4554586, 59.8657873], [30.4557977, 59.8657938], [30.4561382, 59.8658004], [30.4564214, 59.8658058], [30.456776, 59.8658127], [30.4569092, 59.8658153], [30.4569001, 59.8659339], [30.4556422, 59.8659097], [30.4553094, 59.8659032]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_2b806ab9eabb3bf8298f88b678b2d81a.bindTooltip(
+                `<div>
+                     ID: w30420165, Год постройки: 1961, Общий балл: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_2b806ab9eabb3bf8298f88b678b2d81a.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_7f2561b8a9aa7e3ba861f5d8f2104b12_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_7f2561b8a9aa7e3ba861f5d8f2104b12_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_7f2561b8a9aa7e3ba861f5d8f2104b12 = L.geoJson(null, {
+                onEachFeature: geo_json_7f2561b8a9aa7e3ba861f5d8f2104b12_onEachFeature,
+            
+                style: geo_json_7f2561b8a9aa7e3ba861f5d8f2104b12_styler,
+            ...{
+}
+        });
+
+        function geo_json_7f2561b8a9aa7e3ba861f5d8f2104b12_add (data) {
+            geo_json_7f2561b8a9aa7e3ba861f5d8f2104b12
+                .addData(data);
+        }
+            geo_json_7f2561b8a9aa7e3ba861f5d8f2104b12_add({"features": [{"geometry": {"coordinates": [[[[30.4564564, 59.8653066], [30.4581653, 59.8654093], [30.458142, 59.8655071], [30.4579951, 59.8654982], [30.457719, 59.8654816], [30.4574251, 59.865464], [30.4571425, 59.865447], [30.4568527, 59.8654296], [30.4565697, 59.8654125], [30.456433, 59.8654043], [30.4564564, 59.8653066]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_7f2561b8a9aa7e3ba861f5d8f2104b12.bindTooltip(
+                `<div>
+                     ID: w30420167, Год постройки: 1961, Общий балл: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_7f2561b8a9aa7e3ba861f5d8f2104b12.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_a2ce57389c9ffdf829e345b12ee1d45e_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_a2ce57389c9ffdf829e345b12ee1d45e_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_a2ce57389c9ffdf829e345b12ee1d45e = L.geoJson(null, {
+                onEachFeature: geo_json_a2ce57389c9ffdf829e345b12ee1d45e_onEachFeature,
+            
+                style: geo_json_a2ce57389c9ffdf829e345b12ee1d45e_styler,
+            ...{
+}
+        });
+
+        function geo_json_a2ce57389c9ffdf829e345b12ee1d45e_add (data) {
+            geo_json_a2ce57389c9ffdf829e345b12ee1d45e
+                .addData(data);
+        }
+            geo_json_a2ce57389c9ffdf829e345b12ee1d45e_add({"features": [{"geometry": {"coordinates": [[[[30.4562646, 59.8646595], [30.4561425, 59.864573], [30.4562984, 59.8645175], [30.4563113, 59.8645266], [30.4564492, 59.8644776], [30.4564321, 59.8644654], [30.4566122, 59.8644014], [30.4567385, 59.8644909], [30.4566772, 59.8645127], [30.4566151, 59.8645348], [30.4563893, 59.8646151], [30.4562646, 59.8646595]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_a2ce57389c9ffdf829e345b12ee1d45e.bindTooltip(
+                `<div>
+                     ID: w30420172, Год постройки: 1895, Общий балл: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_a2ce57389c9ffdf829e345b12ee1d45e.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_53d76550c6d4afa13d8cf6e68ffd7ed8_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_53d76550c6d4afa13d8cf6e68ffd7ed8_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_53d76550c6d4afa13d8cf6e68ffd7ed8 = L.geoJson(null, {
+                onEachFeature: geo_json_53d76550c6d4afa13d8cf6e68ffd7ed8_onEachFeature,
+            
+                style: geo_json_53d76550c6d4afa13d8cf6e68ffd7ed8_styler,
+            ...{
+}
+        });
+
+        function geo_json_53d76550c6d4afa13d8cf6e68ffd7ed8_add (data) {
+            geo_json_53d76550c6d4afa13d8cf6e68ffd7ed8
+                .addData(data);
+        }
+            geo_json_53d76550c6d4afa13d8cf6e68ffd7ed8_add({"features": [{"geometry": {"coordinates": [[[[30.4573528, 59.8659391], [30.4573863, 59.8658402], [30.4590854, 59.8659853], [30.4590559, 59.8660722], [30.4590519, 59.8660841], [30.458908, 59.8660718], [30.4586273, 59.8660478], [30.4583436, 59.8660236], [30.4580836, 59.8660014], [30.458067, 59.866], [30.4577801, 59.8659755], [30.4575091, 59.8659524], [30.4573528, 59.8659391]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_53d76550c6d4afa13d8cf6e68ffd7ed8.bindTooltip(
+                `<div>
+                     ID: w30420191, Год постройки: 1961, Общий балл: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_53d76550c6d4afa13d8cf6e68ffd7ed8.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_855104a205d35f22e25ae218bf614dc9_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_855104a205d35f22e25ae218bf614dc9_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_855104a205d35f22e25ae218bf614dc9 = L.geoJson(null, {
+                onEachFeature: geo_json_855104a205d35f22e25ae218bf614dc9_onEachFeature,
+            
+                style: geo_json_855104a205d35f22e25ae218bf614dc9_styler,
+            ...{
+}
+        });
+
+        function geo_json_855104a205d35f22e25ae218bf614dc9_add (data) {
+            geo_json_855104a205d35f22e25ae218bf614dc9
+                .addData(data);
+        }
+            geo_json_855104a205d35f22e25ae218bf614dc9_add({"features": [{"geometry": {"coordinates": [[[[30.4594444, 59.8654408], [30.4594284, 59.8655095], [30.4593946, 59.8656549], [30.4593614, 59.8657978], [30.4593288, 59.8659383], [30.4593121, 59.86601], [30.4595096, 59.8660215], [30.4596419, 59.8654524], [30.4594444, 59.8654408]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_855104a205d35f22e25ae218bf614dc9.bindTooltip(
+                `<div>
+                     ID: w30420194, Год постройки: 1961, Общий балл: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_855104a205d35f22e25ae218bf614dc9.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_a3470e3a787baf9a31de3993d341033e_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_a3470e3a787baf9a31de3993d341033e_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_a3470e3a787baf9a31de3993d341033e = L.geoJson(null, {
+                onEachFeature: geo_json_a3470e3a787baf9a31de3993d341033e_onEachFeature,
+            
+                style: geo_json_a3470e3a787baf9a31de3993d341033e_styler,
+            ...{
+}
+        });
+
+        function geo_json_a3470e3a787baf9a31de3993d341033e_add (data) {
+            geo_json_a3470e3a787baf9a31de3993d341033e
+                .addData(data);
+        }
+            geo_json_a3470e3a787baf9a31de3993d341033e_add({"features": [{"geometry": {"coordinates": [[[[30.4583272, 59.865184], [30.4583548, 59.865061], [30.4588885, 59.8650912], [30.4588975, 59.8650512], [30.4592034, 59.8650685], [30.4593498, 59.8650768], [30.4593131, 59.8652399], [30.4591678, 59.8652317], [30.4588284, 59.8652124], [30.4584942, 59.8651935], [30.4583272, 59.865184]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_a3470e3a787baf9a31de3993d341033e.bindTooltip(
+                `<div>
+                     ID: w30420207, Год постройки: 1962, Общий балл: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_a3470e3a787baf9a31de3993d341033e.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_e078735fe2ac84059b229209c377a9bb_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_e078735fe2ac84059b229209c377a9bb_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_e078735fe2ac84059b229209c377a9bb = L.geoJson(null, {
+                onEachFeature: geo_json_e078735fe2ac84059b229209c377a9bb_onEachFeature,
+            
+                style: geo_json_e078735fe2ac84059b229209c377a9bb_styler,
+            ...{
+}
+        });
+
+        function geo_json_e078735fe2ac84059b229209c377a9bb_add (data) {
+            geo_json_e078735fe2ac84059b229209c377a9bb
+                .addData(data);
+        }
+            geo_json_e078735fe2ac84059b229209c377a9bb_add({"features": [{"geometry": {"coordinates": [[[[30.4585009, 59.8648243], [30.4586859, 59.8647774], [30.4579068, 59.8640029], [30.4577217, 59.8640498], [30.4577875, 59.8641152], [30.4579177, 59.8642446], [30.4580479, 59.8643741], [30.4581782, 59.8645035], [30.4583084, 59.864633], [30.4584386, 59.8647624], [30.4585009, 59.8648243]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_e078735fe2ac84059b229209c377a9bb.bindTooltip(
+                `<div>
+                     ID: w30420310, Год постройки: 1961, Общий балл: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_e078735fe2ac84059b229209c377a9bb.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_1f26c27cf4f3f3295d2d5961f89ad7b0_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_1f26c27cf4f3f3295d2d5961f89ad7b0_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_1f26c27cf4f3f3295d2d5961f89ad7b0 = L.geoJson(null, {
+                onEachFeature: geo_json_1f26c27cf4f3f3295d2d5961f89ad7b0_onEachFeature,
+            
+                style: geo_json_1f26c27cf4f3f3295d2d5961f89ad7b0_styler,
+            ...{
+}
+        });
+
+        function geo_json_1f26c27cf4f3f3295d2d5961f89ad7b0_add (data) {
+            geo_json_1f26c27cf4f3f3295d2d5961f89ad7b0
+                .addData(data);
+        }
+            geo_json_1f26c27cf4f3f3295d2d5961f89ad7b0_add({"features": [{"geometry": {"coordinates": [[[[30.4591431, 59.8646623], [30.4593289, 59.8646154], [30.459268, 59.8645546], [30.4591381, 59.8644247], [30.4590082, 59.8642948], [30.4588783, 59.864165], [30.4587483, 59.8640351], [30.4586184, 59.8639053], [30.4585535, 59.8638404], [30.4583677, 59.8638872], [30.4591431, 59.8646623]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_1f26c27cf4f3f3295d2d5961f89ad7b0.bindTooltip(
+                `<div>
+                     ID: w30420316, Год постройки: 1961, Общий балл: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_1f26c27cf4f3f3295d2d5961f89ad7b0.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_86f3dbddf3e03e3e22683677b12026eb_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_86f3dbddf3e03e3e22683677b12026eb_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_86f3dbddf3e03e3e22683677b12026eb = L.geoJson(null, {
+                onEachFeature: geo_json_86f3dbddf3e03e3e22683677b12026eb_onEachFeature,
+            
+                style: geo_json_86f3dbddf3e03e3e22683677b12026eb_styler,
+            ...{
+}
+        });
+
+        function geo_json_86f3dbddf3e03e3e22683677b12026eb_add (data) {
+            geo_json_86f3dbddf3e03e3e22683677b12026eb
+                .addData(data);
+        }
+            geo_json_86f3dbddf3e03e3e22683677b12026eb_add({"features": [{"geometry": {"coordinates": [[[[30.4599938, 59.8644516], [30.4598139, 59.8644972], [30.4597426, 59.8644263], [30.4596129, 59.8642976], [30.4594833, 59.8641688], [30.4593536, 59.86404], [30.459224, 59.8639112], [30.4590944, 59.8637824], [30.4590294, 59.8637179], [30.4592093, 59.8636723], [30.4599938, 59.8644516]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_86f3dbddf3e03e3e22683677b12026eb.bindTooltip(
+                `<div>
+                     ID: w30420334, Год постройки: 1961, Общий балл: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_86f3dbddf3e03e3e22683677b12026eb.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_01cd98d231800d5707dd7aafc218edcd_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_01cd98d231800d5707dd7aafc218edcd_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_01cd98d231800d5707dd7aafc218edcd = L.geoJson(null, {
+                onEachFeature: geo_json_01cd98d231800d5707dd7aafc218edcd_onEachFeature,
+            
+                style: geo_json_01cd98d231800d5707dd7aafc218edcd_styler,
+            ...{
+}
+        });
+
+        function geo_json_01cd98d231800d5707dd7aafc218edcd_add (data) {
+            geo_json_01cd98d231800d5707dd7aafc218edcd
+                .addData(data);
+        }
+            geo_json_01cd98d231800d5707dd7aafc218edcd_add({"features": [{"geometry": {"coordinates": [[[[30.4596623, 59.8635644], [30.4598319, 59.8635215], [30.4598931, 59.8635826], [30.4600235, 59.8637129], [30.460154, 59.8638431], [30.4602844, 59.8639734], [30.4604149, 59.8641037], [30.4605453, 59.8642339], [30.4606049, 59.8642934], [30.4604354, 59.8643362], [30.4596623, 59.8635644]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_01cd98d231800d5707dd7aafc218edcd.bindTooltip(
+                `<div>
+                     ID: w30420343, Год постройки: 1961, Общий балл: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_01cd98d231800d5707dd7aafc218edcd.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_cb18eb4d018aad0c2a54150bfbd629f6_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_cb18eb4d018aad0c2a54150bfbd629f6_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_cb18eb4d018aad0c2a54150bfbd629f6 = L.geoJson(null, {
+                onEachFeature: geo_json_cb18eb4d018aad0c2a54150bfbd629f6_onEachFeature,
+            
+                style: geo_json_cb18eb4d018aad0c2a54150bfbd629f6_styler,
+            ...{
+}
+        });
+
+        function geo_json_cb18eb4d018aad0c2a54150bfbd629f6_add (data) {
+            geo_json_cb18eb4d018aad0c2a54150bfbd629f6
+                .addData(data);
+        }
+            geo_json_cb18eb4d018aad0c2a54150bfbd629f6_add({"features": [{"geometry": {"coordinates": [[[[30.46045, 59.8634252], [30.4606295, 59.8633799], [30.4614027, 59.8641519], [30.4612231, 59.8641973], [30.4611618, 59.8641361], [30.4610315, 59.8640059], [30.4609011, 59.8638756], [30.4607707, 59.8637454], [30.4606403, 59.8636152], [30.4605099, 59.863485], [30.46045, 59.8634252]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_cb18eb4d018aad0c2a54150bfbd629f6.bindTooltip(
+                `<div>
+                     ID: w30420350, Год постройки: 1961, Общий балл: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_cb18eb4d018aad0c2a54150bfbd629f6.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_9b16bc96f91c523674675ff5d0dc2997_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_9b16bc96f91c523674675ff5d0dc2997_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_9b16bc96f91c523674675ff5d0dc2997 = L.geoJson(null, {
+                onEachFeature: geo_json_9b16bc96f91c523674675ff5d0dc2997_onEachFeature,
+            
+                style: geo_json_9b16bc96f91c523674675ff5d0dc2997_styler,
+            ...{
+}
+        });
+
+        function geo_json_9b16bc96f91c523674675ff5d0dc2997_add (data) {
+            geo_json_9b16bc96f91c523674675ff5d0dc2997
+                .addData(data);
+        }
+            geo_json_9b16bc96f91c523674675ff5d0dc2997_add({"features": [{"geometry": {"coordinates": [[[[30.4610166, 59.8652579], [30.4612095, 59.86527], [30.4614218, 59.8644127], [30.461229, 59.8644007], [30.4612126, 59.8644669], [30.461177, 59.8646106], [30.4611414, 59.8647543], [30.4611058, 59.864898], [30.4610702, 59.8650417], [30.4610346, 59.8651854], [30.4610166, 59.8652579]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_9b16bc96f91c523674675ff5d0dc2997.bindTooltip(
+                `<div>
+                     ID: w30527447, Год постройки: 1960, Общий балл: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_9b16bc96f91c523674675ff5d0dc2997.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_8086eaf39c31473d3fa85e452cbe15ca_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_8086eaf39c31473d3fa85e452cbe15ca_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_8086eaf39c31473d3fa85e452cbe15ca = L.geoJson(null, {
+                onEachFeature: geo_json_8086eaf39c31473d3fa85e452cbe15ca_onEachFeature,
+            
+                style: geo_json_8086eaf39c31473d3fa85e452cbe15ca_styler,
+            ...{
+}
+        });
+
+        function geo_json_8086eaf39c31473d3fa85e452cbe15ca_add (data) {
+            geo_json_8086eaf39c31473d3fa85e452cbe15ca
+                .addData(data);
+        }
+            geo_json_8086eaf39c31473d3fa85e452cbe15ca_add({"features": [{"geometry": {"coordinates": [[[[30.4605351, 59.8655009], [30.4603383, 59.8663641], [30.4605257, 59.8663749], [30.4605412, 59.8663071], [30.4605749, 59.8661594], [30.4606075, 59.8660164], [30.4606396, 59.8658754], [30.4606721, 59.8657329], [30.4607048, 59.8655899], [30.4607226, 59.8655117], [30.4605351, 59.8655009]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_8086eaf39c31473d3fa85e452cbe15ca.bindTooltip(
+                `<div>
+                     ID: w30527501, Год постройки: 1961, Общий балл: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_8086eaf39c31473d3fa85e452cbe15ca.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_634d6bae0883adaf0340f3d9411ff87b_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_634d6bae0883adaf0340f3d9411ff87b_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_634d6bae0883adaf0340f3d9411ff87b = L.geoJson(null, {
+                onEachFeature: geo_json_634d6bae0883adaf0340f3d9411ff87b_onEachFeature,
+            
+                style: geo_json_634d6bae0883adaf0340f3d9411ff87b_styler,
+            ...{
+}
+        });
+
+        function geo_json_634d6bae0883adaf0340f3d9411ff87b_add (data) {
+            geo_json_634d6bae0883adaf0340f3d9411ff87b
+                .addData(data);
+        }
+            geo_json_634d6bae0883adaf0340f3d9411ff87b_add({"features": [{"geometry": {"coordinates": [[[[30.4612166, 59.8661238], [30.4614078, 59.8661362], [30.4615528, 59.8655697], [30.4613616, 59.8655574], [30.4613433, 59.8656289], [30.4613075, 59.8657689], [30.4612716, 59.8659088], [30.4612339, 59.8660563], [30.4612166, 59.8661238]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_634d6bae0883adaf0340f3d9411ff87b.bindTooltip(
+                `<div>
+                     ID: w30527504, Год постройки: 1961, Общий балл: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_634d6bae0883adaf0340f3d9411ff87b.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_8614415f80da2016d825f3dea2cfc084_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_8614415f80da2016d825f3dea2cfc084_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_8614415f80da2016d825f3dea2cfc084 = L.geoJson(null, {
+                onEachFeature: geo_json_8614415f80da2016d825f3dea2cfc084_onEachFeature,
+            
+                style: geo_json_8614415f80da2016d825f3dea2cfc084_styler,
+            ...{
+}
+        });
+
+        function geo_json_8614415f80da2016d825f3dea2cfc084_add (data) {
+            geo_json_8614415f80da2016d825f3dea2cfc084
+                .addData(data);
+        }
+            geo_json_8614415f80da2016d825f3dea2cfc084_add({"features": [{"geometry": {"coordinates": [[[[30.4619896, 59.8661704], [30.4621368, 59.8655974], [30.4623257, 59.8656096], [30.4623068, 59.8656833], [30.46227, 59.8658266], [30.4622332, 59.8659699], [30.4621964, 59.8661132], [30.4621785, 59.8661826], [30.4619896, 59.8661704]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_8614415f80da2016d825f3dea2cfc084.bindTooltip(
+                `<div>
+                     ID: w30527507, Год постройки: 1961, Общий балл: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_8614415f80da2016d825f3dea2cfc084.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_8507d5bb8e1f5f8656620e4d55c986d4_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_8507d5bb8e1f5f8656620e4d55c986d4_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_8507d5bb8e1f5f8656620e4d55c986d4 = L.geoJson(null, {
+                onEachFeature: geo_json_8507d5bb8e1f5f8656620e4d55c986d4_onEachFeature,
+            
+                style: geo_json_8507d5bb8e1f5f8656620e4d55c986d4_styler,
+            ...{
+}
+        });
+
+        function geo_json_8507d5bb8e1f5f8656620e4d55c986d4_add (data) {
+            geo_json_8507d5bb8e1f5f8656620e4d55c986d4
+                .addData(data);
+        }
+            geo_json_8507d5bb8e1f5f8656620e4d55c986d4_add({"features": [{"geometry": {"coordinates": [[[[30.4627545, 59.8662189], [30.4629485, 59.8662308], [30.4630881, 59.8656567], [30.4628942, 59.8656448], [30.4628759, 59.8657201], [30.462841, 59.8658635], [30.4628061, 59.8660069], [30.4627712, 59.8661503], [30.4627545, 59.8662189]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_8507d5bb8e1f5f8656620e4d55c986d4.bindTooltip(
+                `<div>
+                     ID: w30527510, Год постройки: 1961, Общий балл: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_8507d5bb8e1f5f8656620e4d55c986d4.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_59deeb7a2f9e48c968d98a7bb4b8943b_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_59deeb7a2f9e48c968d98a7bb4b8943b_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_59deeb7a2f9e48c968d98a7bb4b8943b = L.geoJson(null, {
+                onEachFeature: geo_json_59deeb7a2f9e48c968d98a7bb4b8943b_onEachFeature,
+            
+                style: geo_json_59deeb7a2f9e48c968d98a7bb4b8943b_styler,
+            ...{
+}
+        });
+
+        function geo_json_59deeb7a2f9e48c968d98a7bb4b8943b_add (data) {
+            geo_json_59deeb7a2f9e48c968d98a7bb4b8943b
+                .addData(data);
+        }
+            geo_json_59deeb7a2f9e48c968d98a7bb4b8943b_add({"features": [{"geometry": {"coordinates": [[[[30.4635208, 59.8662675], [30.4637206, 59.86628], [30.4637384, 59.8662079], [30.4637743, 59.8660627], [30.4638082, 59.8659253], [30.4638374, 59.8658071], [30.4638633, 59.8657024], [30.4636635, 59.8656899], [30.4635208, 59.8662675]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_59deeb7a2f9e48c968d98a7bb4b8943b.bindTooltip(
+                `<div>
+                     ID: w30527519, Год постройки: 1960, Общий балл: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_59deeb7a2f9e48c968d98a7bb4b8943b.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_09eaa9a7ce512819d67135e9011309aa_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_09eaa9a7ce512819d67135e9011309aa_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_09eaa9a7ce512819d67135e9011309aa = L.geoJson(null, {
+                onEachFeature: geo_json_09eaa9a7ce512819d67135e9011309aa_onEachFeature,
+            
+                style: geo_json_09eaa9a7ce512819d67135e9011309aa_styler,
+            ...{
+}
+        });
+
+        function geo_json_09eaa9a7ce512819d67135e9011309aa_add (data) {
+            geo_json_09eaa9a7ce512819d67135e9011309aa
+                .addData(data);
+        }
+            geo_json_09eaa9a7ce512819d67135e9011309aa_add({"features": [{"geometry": {"coordinates": [[[[30.4607, 59.8665176], [30.460815, 59.8664484], [30.4621328, 59.8670007], [30.4620345, 59.8670598], [30.4620227, 59.8670669], [30.4620179, 59.8670698], [30.4619098, 59.8670245], [30.4616929, 59.8669336], [30.4614744, 59.8668421], [30.4612511, 59.8667485], [30.4610342, 59.8666576], [30.4608142, 59.8665654], [30.4607104, 59.866522], [30.4607, 59.8665176]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_09eaa9a7ce512819d67135e9011309aa.bindTooltip(
+                `<div>
+                     ID: w30527525, Год постройки: 1961, Общий балл: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_09eaa9a7ce512819d67135e9011309aa.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_8b6153d350f601dd0629d406d4f58066_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_8b6153d350f601dd0629d406d4f58066_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_8b6153d350f601dd0629d406d4f58066 = L.geoJson(null, {
+                onEachFeature: geo_json_8b6153d350f601dd0629d406d4f58066_onEachFeature,
+            
+                style: geo_json_8b6153d350f601dd0629d406d4f58066_styler,
+            ...{
+}
+        });
+
+        function geo_json_8b6153d350f601dd0629d406d4f58066_add (data) {
+            geo_json_8b6153d350f601dd0629d406d4f58066
+                .addData(data);
+        }
+            geo_json_8b6153d350f601dd0629d406d4f58066_add({"features": [{"geometry": {"coordinates": [[[[30.4623061, 59.8667447], [30.4624051, 59.866798], [30.4625976, 59.8669017], [30.4627908, 59.8670057], [30.4629861, 59.8671109], [30.4630877, 59.8671656], [30.4632293, 59.8670993], [30.4624478, 59.8666784], [30.4623061, 59.8667447]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_8b6153d350f601dd0629d406d4f58066.bindTooltip(
+                `<div>
+                     ID: w30527528, Год постройки: 1962, Общий балл: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_8b6153d350f601dd0629d406d4f58066.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_40950f4457bd421e06c7ecb5a9135d9f_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_40950f4457bd421e06c7ecb5a9135d9f_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_40950f4457bd421e06c7ecb5a9135d9f = L.geoJson(null, {
+                onEachFeature: geo_json_40950f4457bd421e06c7ecb5a9135d9f_onEachFeature,
+            
+                style: geo_json_40950f4457bd421e06c7ecb5a9135d9f_styler,
+            ...{
+}
+        });
+
+        function geo_json_40950f4457bd421e06c7ecb5a9135d9f_add (data) {
+            geo_json_40950f4457bd421e06c7ecb5a9135d9f
+                .addData(data);
+        }
+            geo_json_40950f4457bd421e06c7ecb5a9135d9f_add({"features": [{"geometry": {"coordinates": [[[[30.4632017, 59.8679706], [30.4623049, 59.8672812], [30.4625152, 59.8672123], [30.4625789, 59.8672612], [30.4627743, 59.8674115], [30.4629623, 59.867556], [30.4631465, 59.8676976], [30.4633375, 59.8678444], [30.463412, 59.8679017], [30.4632449, 59.8679564], [30.4632017, 59.8679706]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_40950f4457bd421e06c7ecb5a9135d9f.bindTooltip(
+                `<div>
+                     ID: w30527545, Год постройки: 1961, Общий балл: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_40950f4457bd421e06c7ecb5a9135d9f.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_c5053c7ee17494c23d0b57ea1e49aa54_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_c5053c7ee17494c23d0b57ea1e49aa54_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_c5053c7ee17494c23d0b57ea1e49aa54 = L.geoJson(null, {
+                onEachFeature: geo_json_c5053c7ee17494c23d0b57ea1e49aa54_onEachFeature,
+            
+                style: geo_json_c5053c7ee17494c23d0b57ea1e49aa54_styler,
+            ...{
+}
+        });
+
+        function geo_json_c5053c7ee17494c23d0b57ea1e49aa54_add (data) {
+            geo_json_c5053c7ee17494c23d0b57ea1e49aa54
+                .addData(data);
+        }
+            geo_json_c5053c7ee17494c23d0b57ea1e49aa54_add({"features": [{"geometry": {"coordinates": [[[[30.4726544, 59.8622317], [30.4728364, 59.8621885], [30.4727737, 59.8621218], [30.472652, 59.8619926], [30.472526, 59.8618588], [30.472407, 59.8617323], [30.4722871, 59.861605], [30.4721631, 59.8614731], [30.4720975, 59.8614035], [30.4719155, 59.8614467], [30.4726544, 59.8622317]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_c5053c7ee17494c23d0b57ea1e49aa54.bindTooltip(
+                `<div>
+                     ID: w30527646, Год постройки: 1963, Общий балл: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_c5053c7ee17494c23d0b57ea1e49aa54.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_d21a28d13342eb994fd32cdabc136743_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_d21a28d13342eb994fd32cdabc136743_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_d21a28d13342eb994fd32cdabc136743 = L.geoJson(null, {
+                onEachFeature: geo_json_d21a28d13342eb994fd32cdabc136743_onEachFeature,
+            
+                style: geo_json_d21a28d13342eb994fd32cdabc136743_styler,
+            ...{
+}
+        });
+
+        function geo_json_d21a28d13342eb994fd32cdabc136743_add (data) {
+            geo_json_d21a28d13342eb994fd32cdabc136743
+                .addData(data);
+        }
+            geo_json_d21a28d13342eb994fd32cdabc136743_add({"features": [{"geometry": {"coordinates": [[[[30.4733877, 59.8620977], [30.4735881, 59.8620674], [30.4730896, 59.8612374], [30.4728892, 59.8612677], [30.4729462, 59.8613627], [30.4730178, 59.861482], [30.4731004, 59.8616195], [30.4731822, 59.8617556], [30.4732687, 59.8618997], [30.4733499, 59.8620348], [30.4733877, 59.8620977]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_d21a28d13342eb994fd32cdabc136743.bindTooltip(
+                `<div>
+                     ID: w30527648, Год постройки: 1963, Общий балл: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_d21a28d13342eb994fd32cdabc136743.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_0ab81c62b06107815b7cc915604d3e19_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_0ab81c62b06107815b7cc915604d3e19_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_0ab81c62b06107815b7cc915604d3e19 = L.geoJson(null, {
+                onEachFeature: geo_json_0ab81c62b06107815b7cc915604d3e19_onEachFeature,
+            
+                style: geo_json_0ab81c62b06107815b7cc915604d3e19_styler,
+            ...{
+}
+        });
+
+        function geo_json_0ab81c62b06107815b7cc915604d3e19_add (data) {
+            geo_json_0ab81c62b06107815b7cc915604d3e19
+                .addData(data);
+        }
+            geo_json_0ab81c62b06107815b7cc915604d3e19_add({"features": [{"geometry": {"coordinates": [[[[30.4744663, 59.8621472], [30.4746556, 59.862187], [30.4747157, 59.8621148], [30.4748261, 59.8619823], [30.474938, 59.8618479], [30.4750487, 59.8617149], [30.4751482, 59.8615955], [30.475264, 59.8614564], [30.4753223, 59.8613864], [30.4751329, 59.8613467], [30.4744663, 59.8621472]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_0ab81c62b06107815b7cc915604d3e19.bindTooltip(
+                `<div>
+                     ID: w30527653, Год постройки: 1963, Общий балл: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_0ab81c62b06107815b7cc915604d3e19.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_0cf75f23368d41ef780bae497b5c0623_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_0cf75f23368d41ef780bae497b5c0623_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_0cf75f23368d41ef780bae497b5c0623 = L.geoJson(null, {
+                onEachFeature: geo_json_0cf75f23368d41ef780bae497b5c0623_onEachFeature,
+            
+                style: geo_json_0cf75f23368d41ef780bae497b5c0623_styler,
+            ...{
+}
+        });
+
+        function geo_json_0cf75f23368d41ef780bae497b5c0623_add (data) {
+            geo_json_0cf75f23368d41ef780bae497b5c0623
+                .addData(data);
+        }
+            geo_json_0cf75f23368d41ef780bae497b5c0623_add({"features": [{"geometry": {"coordinates": [[[[30.4752097, 59.8623388], [30.4753676, 59.8623851], [30.4762181, 59.8616532], [30.4760601, 59.861607], [30.4759809, 59.8616751], [30.4758457, 59.8617915], [30.4756946, 59.8619216], [30.4755482, 59.8620475], [30.4754012, 59.862174], [30.475261, 59.8622947], [30.4752097, 59.8623388]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_0cf75f23368d41ef780bae497b5c0623.bindTooltip(
+                `<div>
+                     ID: w30527655, Год постройки: 1963, Общий балл: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_0cf75f23368d41ef780bae497b5c0623.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_6307ff8988b4bd8ab4a78029f1314eb8_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_6307ff8988b4bd8ab4a78029f1314eb8_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_6307ff8988b4bd8ab4a78029f1314eb8 = L.geoJson(null, {
+                onEachFeature: geo_json_6307ff8988b4bd8ab4a78029f1314eb8_onEachFeature,
+            
+                style: geo_json_6307ff8988b4bd8ab4a78029f1314eb8_styler,
+            ...{
+}
+        });
+
+        function geo_json_6307ff8988b4bd8ab4a78029f1314eb8_add (data) {
+            geo_json_6307ff8988b4bd8ab4a78029f1314eb8
+                .addData(data);
+        }
+            geo_json_6307ff8988b4bd8ab4a78029f1314eb8_add({"features": [{"geometry": {"coordinates": [[[[30.4776339, 59.860842], [30.4776473, 59.8608243], [30.4777203, 59.860728], [30.4777919, 59.8606335], [30.4780513, 59.8606831], [30.4779774, 59.8607805], [30.4779136, 59.8608646], [30.4778933, 59.8608915], [30.4776339, 59.860842]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_6307ff8988b4bd8ab4a78029f1314eb8.bindTooltip(
+                `<div>
+                     ID: w30527668, Год постройки: 1906, Общий балл: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_6307ff8988b4bd8ab4a78029f1314eb8.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_9925a66b1d8230c87881ef62e17770db_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_9925a66b1d8230c87881ef62e17770db_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_9925a66b1d8230c87881ef62e17770db = L.geoJson(null, {
+                onEachFeature: geo_json_9925a66b1d8230c87881ef62e17770db_onEachFeature,
+            
+                style: geo_json_9925a66b1d8230c87881ef62e17770db_styler,
+            ...{
+}
+        });
+
+        function geo_json_9925a66b1d8230c87881ef62e17770db_add (data) {
+            geo_json_9925a66b1d8230c87881ef62e17770db
+                .addData(data);
+        }
+            geo_json_9925a66b1d8230c87881ef62e17770db_add({"features": [{"geometry": {"coordinates": [[[[30.4766583, 59.8618268], [30.4769131, 59.8618913], [30.4770867, 59.8617184], [30.4768319, 59.8616539], [30.4767524, 59.8617331], [30.4766583, 59.8618268]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_9925a66b1d8230c87881ef62e17770db.bindTooltip(
+                `<div>
+                     ID: w30527673, Год постройки: 1890, Общий балл: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_9925a66b1d8230c87881ef62e17770db.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_829031f1982f81db0a2d9935c70bb172_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_829031f1982f81db0a2d9935c70bb172_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_829031f1982f81db0a2d9935c70bb172 = L.geoJson(null, {
+                onEachFeature: geo_json_829031f1982f81db0a2d9935c70bb172_onEachFeature,
+            
+                style: geo_json_829031f1982f81db0a2d9935c70bb172_styler,
+            ...{
+}
+        });
+
+        function geo_json_829031f1982f81db0a2d9935c70bb172_add (data) {
+            geo_json_829031f1982f81db0a2d9935c70bb172
+                .addData(data);
+        }
+            geo_json_829031f1982f81db0a2d9935c70bb172_add({"features": [{"geometry": {"coordinates": [[[[30.4663263, 59.8658464], [30.4661687, 59.8658383], [30.4661696, 59.865831], [30.4660946, 59.865827], [30.4660941, 59.8658309], [30.4660936, 59.8658344], [30.4657087, 59.8658145], [30.4656819, 59.8659297], [30.4658548, 59.8659386], [30.466132, 59.865953], [30.4662911, 59.8659612], [30.4663263, 59.8658464]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_829031f1982f81db0a2d9935c70bb172.bindTooltip(
+                `<div>
+                     ID: w30738286, Год постройки: 1917, Общий балл: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_829031f1982f81db0a2d9935c70bb172.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_503592c94d3531df2e1e6c8fc0520b8a_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_503592c94d3531df2e1e6c8fc0520b8a_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_503592c94d3531df2e1e6c8fc0520b8a = L.geoJson(null, {
+                onEachFeature: geo_json_503592c94d3531df2e1e6c8fc0520b8a_onEachFeature,
+            
+                style: geo_json_503592c94d3531df2e1e6c8fc0520b8a_styler,
+            ...{
+}
+        });
+
+        function geo_json_503592c94d3531df2e1e6c8fc0520b8a_add (data) {
+            geo_json_503592c94d3531df2e1e6c8fc0520b8a
+                .addData(data);
+        }
+            geo_json_503592c94d3531df2e1e6c8fc0520b8a_add({"features": [{"geometry": {"coordinates": [[[[30.4657469, 59.8668405], [30.4658483, 59.8667552], [30.4660357, 59.8665975], [30.4662234, 59.8664396], [30.466274, 59.866397], [30.4663141, 59.8663633], [30.4665307, 59.8664282], [30.4664253, 59.8665169], [30.4661497, 59.8667487], [30.4659635, 59.8669054], [30.4657469, 59.8668405]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_503592c94d3531df2e1e6c8fc0520b8a.bindTooltip(
+                `<div>
+                     ID: w30738301, Год постройки: 1956, Общий балл: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_503592c94d3531df2e1e6c8fc0520b8a.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_6492980080233447b66d4851ed4b02c0_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_6492980080233447b66d4851ed4b02c0_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_6492980080233447b66d4851ed4b02c0 = L.geoJson(null, {
+                onEachFeature: geo_json_6492980080233447b66d4851ed4b02c0_onEachFeature,
+            
+                style: geo_json_6492980080233447b66d4851ed4b02c0_styler,
+            ...{
+}
+        });
+
+        function geo_json_6492980080233447b66d4851ed4b02c0_add (data) {
+            geo_json_6492980080233447b66d4851ed4b02c0
+                .addData(data);
+        }
+            geo_json_6492980080233447b66d4851ed4b02c0_add({"features": [{"geometry": {"coordinates": [[[[30.4765463, 59.8610969], [30.4767239, 59.8611374], [30.4774375, 59.8603483], [30.47726, 59.8603079], [30.4772081, 59.8603652], [30.4770839, 59.8605025], [30.4769679, 59.8606308], [30.4768388, 59.8607736], [30.4767253, 59.8608991], [30.4766072, 59.8610296], [30.4765463, 59.8610969]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_6492980080233447b66d4851ed4b02c0.bindTooltip(
+                `<div>
+                     ID: w30738331, Год постройки: 1963, Общий балл: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_6492980080233447b66d4851ed4b02c0.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_c710d9570fa0b28e19cc379943817719_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_c710d9570fa0b28e19cc379943817719_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_c710d9570fa0b28e19cc379943817719 = L.geoJson(null, {
+                onEachFeature: geo_json_c710d9570fa0b28e19cc379943817719_onEachFeature,
+            
+                style: geo_json_c710d9570fa0b28e19cc379943817719_styler,
+            ...{
+}
+        });
+
+        function geo_json_c710d9570fa0b28e19cc379943817719_add (data) {
+            geo_json_c710d9570fa0b28e19cc379943817719
+                .addData(data);
+        }
+            geo_json_c710d9570fa0b28e19cc379943817719_add({"features": [{"geometry": {"coordinates": [[[[30.4757918, 59.8609598], [30.475986, 59.8609945], [30.4765664, 59.8601775], [30.4763722, 59.8601427], [30.4763261, 59.8602076], [30.4762245, 59.8603507], [30.4761318, 59.8604812], [30.4760283, 59.8606268], [30.4759383, 59.8607535], [30.4758408, 59.8608908], [30.4757918, 59.8609598]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_c710d9570fa0b28e19cc379943817719.bindTooltip(
+                `<div>
+                     ID: w30738336, Год постройки: 1963, Общий балл: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_c710d9570fa0b28e19cc379943817719.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_7819e0a7c1f2b68c8e681f49eb231e09_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_7819e0a7c1f2b68c8e681f49eb231e09_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_7819e0a7c1f2b68c8e681f49eb231e09 = L.geoJson(null, {
+                onEachFeature: geo_json_7819e0a7c1f2b68c8e681f49eb231e09_onEachFeature,
+            
+                style: geo_json_7819e0a7c1f2b68c8e681f49eb231e09_styler,
+            ...{
+}
+        });
+
+        function geo_json_7819e0a7c1f2b68c8e681f49eb231e09_add (data) {
+            geo_json_7819e0a7c1f2b68c8e681f49eb231e09
+                .addData(data);
+        }
+            geo_json_7819e0a7c1f2b68c8e681f49eb231e09_add({"features": [{"geometry": {"coordinates": [[[[30.4750524, 59.8608794], [30.4752468, 59.8609031], [30.4752801, 59.8608344], [30.4753504, 59.8606895], [30.4754191, 59.8605479], [30.4754856, 59.8604107], [30.4755522, 59.8602734], [30.4756238, 59.8601256], [30.4756556, 59.8600601], [30.4754611, 59.8600363], [30.4750524, 59.8608794]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_7819e0a7c1f2b68c8e681f49eb231e09.bindTooltip(
+                `<div>
+                     ID: w30738342, Год постройки: 1963, Общий балл: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_7819e0a7c1f2b68c8e681f49eb231e09.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_3db2e9fdc3f902d4ba67468ac405c85b_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_3db2e9fdc3f902d4ba67468ac405c85b_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_3db2e9fdc3f902d4ba67468ac405c85b = L.geoJson(null, {
+                onEachFeature: geo_json_3db2e9fdc3f902d4ba67468ac405c85b_onEachFeature,
+            
+                style: geo_json_3db2e9fdc3f902d4ba67468ac405c85b_styler,
+            ...{
+}
+        });
+
+        function geo_json_3db2e9fdc3f902d4ba67468ac405c85b_add (data) {
+            geo_json_3db2e9fdc3f902d4ba67468ac405c85b
+                .addData(data);
+        }
+            geo_json_3db2e9fdc3f902d4ba67468ac405c85b_add({"features": [{"geometry": {"coordinates": [[[[30.4730263, 59.860951], [30.4732136, 59.8609212], [30.4726927, 59.8600937], [30.4725054, 59.8601234], [30.4725483, 59.8601916], [30.472635, 59.8603292], [30.4727233, 59.8604696], [30.4728092, 59.860606], [30.472897, 59.8607454], [30.4729819, 59.8608805], [30.4730263, 59.860951]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_3db2e9fdc3f902d4ba67468ac405c85b.bindTooltip(
+                `<div>
+                     ID: w30738346, Год постройки: 1963, Общий балл: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_3db2e9fdc3f902d4ba67468ac405c85b.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_52afd8d9a025494fe9bddcd5fec577e1_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_52afd8d9a025494fe9bddcd5fec577e1_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_52afd8d9a025494fe9bddcd5fec577e1 = L.geoJson(null, {
+                onEachFeature: geo_json_52afd8d9a025494fe9bddcd5fec577e1_onEachFeature,
+            
+                style: geo_json_52afd8d9a025494fe9bddcd5fec577e1_styler,
+            ...{
+}
+        });
+
+        function geo_json_52afd8d9a025494fe9bddcd5fec577e1_add (data) {
+            geo_json_52afd8d9a025494fe9bddcd5fec577e1
+                .addData(data);
+        }
+            geo_json_52afd8d9a025494fe9bddcd5fec577e1_add({"features": [{"geometry": {"coordinates": [[[[30.4723562, 59.8610719], [30.472548, 59.8610323], [30.4724931, 59.8609654], [30.4723858, 59.8608345], [30.4722773, 59.8607022], [30.472168, 59.8605689], [30.472056, 59.8604324], [30.4719463, 59.8602986], [30.4718912, 59.8602314], [30.4716994, 59.860271], [30.4723562, 59.8610719]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_52afd8d9a025494fe9bddcd5fec577e1.bindTooltip(
+                `<div>
+                     ID: w30738347, Год постройки: 1963, Общий балл: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_52afd8d9a025494fe9bddcd5fec577e1.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_c0899a08c34f1523c4e3062f4ed59b40_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_c0899a08c34f1523c4e3062f4ed59b40_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_c0899a08c34f1523c4e3062f4ed59b40 = L.geoJson(null, {
+                onEachFeature: geo_json_c0899a08c34f1523c4e3062f4ed59b40_onEachFeature,
+            
+                style: geo_json_c0899a08c34f1523c4e3062f4ed59b40_styler,
+            ...{
+}
+        });
+
+        function geo_json_c0899a08c34f1523c4e3062f4ed59b40_add (data) {
+            geo_json_c0899a08c34f1523c4e3062f4ed59b40
+                .addData(data);
+        }
+            geo_json_c0899a08c34f1523c4e3062f4ed59b40_add({"features": [{"geometry": {"coordinates": [[[[30.4717063, 59.861237], [30.4718912, 59.861193], [30.4718324, 59.8611308], [30.47171, 59.8610014], [30.4715856, 59.8608698], [30.4714631, 59.8607404], [30.4713385, 59.8606086], [30.4712113, 59.8604741], [30.4711504, 59.8604097], [30.4709655, 59.8604538], [30.4717063, 59.861237]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_c0899a08c34f1523c4e3062f4ed59b40.bindTooltip(
+                `<div>
+                     ID: w30738348, Год постройки: 1963, Общий балл: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_c0899a08c34f1523c4e3062f4ed59b40.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_ca50fcc8c0af9269d135531376c21ab4_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_ca50fcc8c0af9269d135531376c21ab4_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_ca50fcc8c0af9269d135531376c21ab4 = L.geoJson(null, {
+                onEachFeature: geo_json_ca50fcc8c0af9269d135531376c21ab4_onEachFeature,
+            
+                style: geo_json_ca50fcc8c0af9269d135531376c21ab4_styler,
+            ...{
+}
+        });
+
+        function geo_json_ca50fcc8c0af9269d135531376c21ab4_add (data) {
+            geo_json_ca50fcc8c0af9269d135531376c21ab4
+                .addData(data);
+        }
+            geo_json_ca50fcc8c0af9269d135531376c21ab4_add({"features": [{"geometry": {"coordinates": [[[[30.4691596, 59.8642333], [30.4683072, 59.8644582], [30.468422, 59.864568], [30.4685868, 59.8645245], [30.4688463, 59.864456], [30.4691198, 59.8643838], [30.4692745, 59.864343], [30.4691596, 59.8642333]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_ca50fcc8c0af9269d135531376c21ab4.bindTooltip(
+                `<div>
+                     ID: w37116257, Год постройки: 1938, Общий балл: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_ca50fcc8c0af9269d135531376c21ab4.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_46d658a02f0309bddec7936c62e57a14_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_46d658a02f0309bddec7936c62e57a14_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_46d658a02f0309bddec7936c62e57a14 = L.geoJson(null, {
+                onEachFeature: geo_json_46d658a02f0309bddec7936c62e57a14_onEachFeature,
+            
+                style: geo_json_46d658a02f0309bddec7936c62e57a14_styler,
+            ...{
+}
+        });
+
+        function geo_json_46d658a02f0309bddec7936c62e57a14_add (data) {
+            geo_json_46d658a02f0309bddec7936c62e57a14
+                .addData(data);
+        }
+            geo_json_46d658a02f0309bddec7936c62e57a14_add({"features": [{"geometry": {"coordinates": [[[[30.469498, 59.8639387], [30.4693085, 59.8639862], [30.4692782, 59.8639939], [30.4693382, 59.8640517], [30.4694762, 59.8641845], [30.4695987, 59.8643025], [30.4697282, 59.8644273], [30.4697447, 59.8644431], [30.4696179, 59.8644763], [30.4693403, 59.8645491], [30.469144, 59.8646006], [30.4692512, 59.864702], [30.4693468, 59.8646777], [30.4693659, 59.8646729], [30.4693794, 59.8646694], [30.4693878, 59.8646779], [30.4699338, 59.8645337], [30.4699194, 59.8645195], [30.469906, 59.8645063], [30.4700347, 59.8644724], [30.4700209, 59.8644588], [30.4699956, 59.864432], [30.4698474, 59.8642851], [30.4698108, 59.8642488], [30.4697104, 59.8641493], [30.4696856, 59.8641247], [30.4695497, 59.86399], [30.469498, 59.8639387]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_46d658a02f0309bddec7936c62e57a14.bindTooltip(
+                `<div>
+                     ID: w37116258, Год постройки: 1938, Общий балл: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_46d658a02f0309bddec7936c62e57a14.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_539cc5e7a1e2311976178c4f75f164be_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_539cc5e7a1e2311976178c4f75f164be_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_539cc5e7a1e2311976178c4f75f164be = L.geoJson(null, {
+                onEachFeature: geo_json_539cc5e7a1e2311976178c4f75f164be_onEachFeature,
+            
+                style: geo_json_539cc5e7a1e2311976178c4f75f164be_styler,
+            ...{
+}
+        });
+
+        function geo_json_539cc5e7a1e2311976178c4f75f164be_add (data) {
+            geo_json_539cc5e7a1e2311976178c4f75f164be
+                .addData(data);
+        }
+            geo_json_539cc5e7a1e2311976178c4f75f164be_add({"features": [{"geometry": {"coordinates": [[[[30.4679258, 59.8647183], [30.4681745, 59.8649601], [30.4683186, 59.8649228], [30.4683317, 59.8649355], [30.4683459, 59.8649493], [30.4688929, 59.8648075], [30.4688859, 59.8647994], [30.4690067, 59.8647687], [30.4688981, 59.8646633], [30.4687254, 59.8647081], [30.4684202, 59.8647872], [30.4683132, 59.864815], [30.4682929, 59.8647952], [30.468173, 59.8646786], [30.4681531, 59.8646593], [30.4679258, 59.8647183]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_539cc5e7a1e2311976178c4f75f164be.bindTooltip(
+                `<div>
+                     ID: w37116259, Год постройки: 1938, Общий балл: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_539cc5e7a1e2311976178c4f75f164be.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_f5b627e1631714e735e3d28bbefb9e7a_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_f5b627e1631714e735e3d28bbefb9e7a_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_f5b627e1631714e735e3d28bbefb9e7a = L.geoJson(null, {
+                onEachFeature: geo_json_f5b627e1631714e735e3d28bbefb9e7a_onEachFeature,
+            
+                style: geo_json_f5b627e1631714e735e3d28bbefb9e7a_styler,
+            ...{
+}
+        });
+
+        function geo_json_f5b627e1631714e735e3d28bbefb9e7a_add (data) {
+            geo_json_f5b627e1631714e735e3d28bbefb9e7a
+                .addData(data);
+        }
+            geo_json_f5b627e1631714e735e3d28bbefb9e7a_add({"features": [{"geometry": {"coordinates": [[[[30.4677984, 59.8650268], [30.4678806, 59.8651002], [30.4679652, 59.8651756], [30.4681631, 59.8651197], [30.4682163, 59.8651047], [30.4680496, 59.8649559], [30.4677984, 59.8650268]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_f5b627e1631714e735e3d28bbefb9e7a.bindTooltip(
+                `<div>
+                     ID: w37116260, Год постройки: 1917, Общий балл: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_f5b627e1631714e735e3d28bbefb9e7a.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_90c67aa951c664fadc389568c9916dc5_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_90c67aa951c664fadc389568c9916dc5_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_90c67aa951c664fadc389568c9916dc5 = L.geoJson(null, {
+                onEachFeature: geo_json_90c67aa951c664fadc389568c9916dc5_onEachFeature,
+            
+                style: geo_json_90c67aa951c664fadc389568c9916dc5_styler,
+            ...{
+}
+        });
+
+        function geo_json_90c67aa951c664fadc389568c9916dc5_add (data) {
+            geo_json_90c67aa951c664fadc389568c9916dc5
+                .addData(data);
+        }
+            geo_json_90c67aa951c664fadc389568c9916dc5_add({"features": [{"geometry": {"coordinates": [[[[30.4633104, 59.8681155], [30.463564, 59.8680335], [30.4637935, 59.8679592], [30.463945, 59.8680772], [30.4638259, 59.8681158], [30.4637035, 59.8681553], [30.4635904, 59.8681919], [30.463489, 59.8682247], [30.463447, 59.8682219], [30.4633104, 59.8681155]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_90c67aa951c664fadc389568c9916dc5.bindTooltip(
+                `<div>
+                     ID: w37214845, Год постройки: 1917, Общий балл: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_90c67aa951c664fadc389568c9916dc5.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_f855f6a666f4a768a2d0a6f4a7e1454b_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_f855f6a666f4a768a2d0a6f4a7e1454b_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_f855f6a666f4a768a2d0a6f4a7e1454b = L.geoJson(null, {
+                onEachFeature: geo_json_f855f6a666f4a768a2d0a6f4a7e1454b_onEachFeature,
+            
+                style: geo_json_f855f6a666f4a768a2d0a6f4a7e1454b_styler,
+            ...{
+}
+        });
+
+        function geo_json_f855f6a666f4a768a2d0a6f4a7e1454b_add (data) {
+            geo_json_f855f6a666f4a768a2d0a6f4a7e1454b
+                .addData(data);
+        }
+            geo_json_f855f6a666f4a768a2d0a6f4a7e1454b_add({"features": [{"geometry": {"coordinates": [[[[30.4658338, 59.8656284], [30.465863, 59.8655265], [30.465983, 59.8655352], [30.4659883, 59.8655168], [30.4660264, 59.8655195], [30.4660645, 59.8655223], [30.4660592, 59.8655407], [30.4662281, 59.8655529], [30.4661989, 59.8656548], [30.4658338, 59.8656284]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_f855f6a666f4a768a2d0a6f4a7e1454b.bindTooltip(
+                `<div>
+                     ID: w37617482, Год постройки: 1917, Общий балл: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_f855f6a666f4a768a2d0a6f4a7e1454b.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_6451ba742a33a45868ed5c1303cec021_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_6451ba742a33a45868ed5c1303cec021_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_6451ba742a33a45868ed5c1303cec021 = L.geoJson(null, {
+                onEachFeature: geo_json_6451ba742a33a45868ed5c1303cec021_onEachFeature,
+            
+                style: geo_json_6451ba742a33a45868ed5c1303cec021_styler,
+            ...{
+}
+        });
+
+        function geo_json_6451ba742a33a45868ed5c1303cec021_add (data) {
+            geo_json_6451ba742a33a45868ed5c1303cec021
+                .addData(data);
+        }
+            geo_json_6451ba742a33a45868ed5c1303cec021_add({"features": [{"geometry": {"coordinates": [[[[30.4652829, 59.8672763], [30.4654673, 59.8673313], [30.4659226, 59.866947], [30.4657382, 59.866892], [30.4656664, 59.8669526], [30.4655144, 59.8670809], [30.4653535, 59.8672167], [30.4652829, 59.8672763]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_6451ba742a33a45868ed5c1303cec021.bindTooltip(
+                `<div>
+                     ID: w55700821, Год постройки: 1930, Общий балл: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_6451ba742a33a45868ed5c1303cec021.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_180054552262845c0f8d70f0256d587a_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_180054552262845c0f8d70f0256d587a_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_180054552262845c0f8d70f0256d587a = L.geoJson(null, {
+                onEachFeature: geo_json_180054552262845c0f8d70f0256d587a_onEachFeature,
+            
+                style: geo_json_180054552262845c0f8d70f0256d587a_styler,
+            ...{
+}
+        });
+
+        function geo_json_180054552262845c0f8d70f0256d587a_add (data) {
+            geo_json_180054552262845c0f8d70f0256d587a
+                .addData(data);
+        }
+            geo_json_180054552262845c0f8d70f0256d587a_add({"features": [{"geometry": {"coordinates": [[[[30.4665959, 59.8661664], [30.4665112, 59.8662401], [30.4664099, 59.8663282], [30.466624, 59.8663961], [30.4668187, 59.8662265], [30.4665959, 59.8661664]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_180054552262845c0f8d70f0256d587a.bindTooltip(
+                `<div>
+                     ID: w136027785, Год постройки: 1959, Общий балл: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_180054552262845c0f8d70f0256d587a.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_3b49c50ae3b474295524b3bbcad02910_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_3b49c50ae3b474295524b3bbcad02910_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_3b49c50ae3b474295524b3bbcad02910 = L.geoJson(null, {
+                onEachFeature: geo_json_3b49c50ae3b474295524b3bbcad02910_onEachFeature,
+            
+                style: geo_json_3b49c50ae3b474295524b3bbcad02910_styler,
+            ...{
+}
+        });
+
+        function geo_json_3b49c50ae3b474295524b3bbcad02910_add (data) {
+            geo_json_3b49c50ae3b474295524b3bbcad02910
+                .addData(data);
+        }
+            geo_json_3b49c50ae3b474295524b3bbcad02910_add({"features": [{"geometry": {"coordinates": [[[[30.4662911, 59.8659612], [30.4663967, 59.8659686], [30.4664155, 59.8659872], [30.4665532, 59.866124], [30.4665959, 59.8661664], [30.4668187, 59.8662265], [30.4668881, 59.8661667], [30.4668359, 59.866118], [30.4667286, 59.866018], [30.4665569, 59.8658579], [30.4663263, 59.8658464], [30.4662911, 59.8659612]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_3b49c50ae3b474295524b3bbcad02910.bindTooltip(
+                `<div>
+                     ID: w136027787, Год постройки: 1959, Общий балл: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_3b49c50ae3b474295524b3bbcad02910.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_94015becb2b5e19d43156d91df11e602_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_94015becb2b5e19d43156d91df11e602_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_94015becb2b5e19d43156d91df11e602 = L.geoJson(null, {
+                onEachFeature: geo_json_94015becb2b5e19d43156d91df11e602_onEachFeature,
+            
+                style: geo_json_94015becb2b5e19d43156d91df11e602_styler,
+            ...{
+}
+        });
+
+        function geo_json_94015becb2b5e19d43156d91df11e602_add (data) {
+            geo_json_94015becb2b5e19d43156d91df11e602
+                .addData(data);
+        }
+            geo_json_94015becb2b5e19d43156d91df11e602_add({"features": [{"geometry": {"coordinates": [[[[30.4548581, 59.8658127], [30.4552163, 59.8658119], [30.4552137, 59.8657942], [30.4552113, 59.8657357], [30.4551376, 59.8657373], [30.4551233, 59.865682], [30.4550954, 59.8655743], [30.455077, 59.8655032], [30.4550581, 59.8654302], [30.4550345, 59.865339], [30.4550137, 59.8652586], [30.4549918, 59.8651739], [30.4549693, 59.8650873], [30.4549577, 59.8650422], [30.4549482, 59.8650057], [30.4549242, 59.8649132], [30.4549021, 59.8648277], [30.4548643, 59.8648324], [30.4548525, 59.8647837], [30.4548724, 59.8647782], [30.4549517, 59.8647561], [30.4549705, 59.8647783], [30.4551873, 59.8647218], [30.4553068, 59.8646906], [30.4553512, 59.8646778], [30.4552112, 59.8645301], [30.4545655, 59.8646939], [30.45466, 59.8650565], [30.4548581, 59.8658127]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_94015becb2b5e19d43156d91df11e602.bindTooltip(
+                `<div>
+                     ID: w142748971, Год постройки: 1972, Общий балл: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_94015becb2b5e19d43156d91df11e602.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_afcaf1f1397dce7ade3c0fb8fde05f1b_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "green", "fillColor": "green", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_afcaf1f1397dce7ade3c0fb8fde05f1b_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_afcaf1f1397dce7ade3c0fb8fde05f1b = L.geoJson(null, {
+                onEachFeature: geo_json_afcaf1f1397dce7ade3c0fb8fde05f1b_onEachFeature,
+            
+                style: geo_json_afcaf1f1397dce7ade3c0fb8fde05f1b_styler,
+            ...{
+}
+        });
+
+        function geo_json_afcaf1f1397dce7ade3c0fb8fde05f1b_add (data) {
+            geo_json_afcaf1f1397dce7ade3c0fb8fde05f1b
+                .addData(data);
+        }
+            geo_json_afcaf1f1397dce7ade3c0fb8fde05f1b_add({"features": [{"geometry": {"coordinates": [[[[30.4629732, 59.8629377], [30.4629405, 59.8629048], [30.4629245, 59.8628888], [30.4628444, 59.8628064], [30.4627822, 59.8627459], [30.4622454, 59.8628815], [30.4617138, 59.8630158], [30.4617743, 59.8630905], [30.4619923, 59.8633194], [30.4620855, 59.8634114], [30.4623138, 59.8633531], [30.4622244, 59.8632648], [30.462012, 59.8630551], [30.4620393, 59.8630482], [30.4623403, 59.8629712], [30.4625987, 59.8629053], [30.4626664, 59.8628895], [30.4627608, 59.8629922], [30.4629732, 59.8629377]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_afcaf1f1397dce7ade3c0fb8fde05f1b.bindTooltip(
+                `<div>
+                     ID: w298872721, Год постройки: 2021, Общий балл: 8
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_afcaf1f1397dce7ade3c0fb8fde05f1b.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_60d8e41559d81517e8cacfa6be53e673_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "green", "fillColor": "green", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_60d8e41559d81517e8cacfa6be53e673_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_60d8e41559d81517e8cacfa6be53e673 = L.geoJson(null, {
+                onEachFeature: geo_json_60d8e41559d81517e8cacfa6be53e673_onEachFeature,
+            
+                style: geo_json_60d8e41559d81517e8cacfa6be53e673_styler,
+            ...{
+}
+        });
+
+        function geo_json_60d8e41559d81517e8cacfa6be53e673_add (data) {
+            geo_json_60d8e41559d81517e8cacfa6be53e673
+                .addData(data);
+        }
+            geo_json_60d8e41559d81517e8cacfa6be53e673_add({"features": [{"geometry": {"coordinates": [[[[30.4624966, 59.8638125], [30.4628375, 59.8637319], [30.4631636, 59.8636548], [30.4633679, 59.8636066], [30.4635263, 59.8635691], [30.4633946, 59.8634287], [30.4632418, 59.8634648], [30.4630367, 59.8635133], [30.4626957, 59.8635939], [30.4626385, 59.8636074], [30.4625551, 59.8635185], [30.4622815, 59.8635831], [30.4624966, 59.8638125]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_60d8e41559d81517e8cacfa6be53e673.bindTooltip(
+                `<div>
+                     ID: w305681246, Год постройки: 2021, Общий балл: 8
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_60d8e41559d81517e8cacfa6be53e673.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+    
+        function geo_json_8a3804b5fa7bec7ad6aa9bba1b2db50e_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_8a3804b5fa7bec7ad6aa9bba1b2db50e_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_8a3804b5fa7bec7ad6aa9bba1b2db50e = L.geoJson(null, {
+                onEachFeature: geo_json_8a3804b5fa7bec7ad6aa9bba1b2db50e_onEachFeature,
+            
+                style: geo_json_8a3804b5fa7bec7ad6aa9bba1b2db50e_styler,
+            ...{
+}
+        });
+
+        function geo_json_8a3804b5fa7bec7ad6aa9bba1b2db50e_add (data) {
+            geo_json_8a3804b5fa7bec7ad6aa9bba1b2db50e
+                .addData(data);
+        }
+            geo_json_8a3804b5fa7bec7ad6aa9bba1b2db50e_add({"features": [{"geometry": {"coordinates": [[[[30.4681531, 59.8646593], [30.4680238, 59.8645336], [30.4680061, 59.8645164], [30.4678977, 59.8645445], [30.4677788, 59.8645754], [30.4679258, 59.8647183], [30.4681531, 59.8646593]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_8a3804b5fa7bec7ad6aa9bba1b2db50e.bindTooltip(
+                `<div>
+                     ID: w1203883429, Год постройки: 1938, Общий балл: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_8a3804b5fa7bec7ad6aa9bba1b2db50e.addTo(map_e7a27fd72066d6f3df672e95a8001dca);
+        
+</script>
+</html>
